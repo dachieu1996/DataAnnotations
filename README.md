@@ -47,13 +47,16 @@ public string Name { get; set; }
 </pre>
 
 ## Composite Indices
+<pre>
 [Index(“IX_AuthorStudentsCount”, 1)]
 public int AuthorId { get; set; }
 
 [Index(“IX_AuthorStudentsCount”, 2)]
 public int StudentsCount { get; set; }
+</pre>
 
 ## Foreign Keys
+<pre>
 public class Course
 {
   [ForeignKey(“Author”)]
@@ -61,4 +64,5 @@ public class Course
 
   public Author Author { get; set; }
 }
+</pre>
 
